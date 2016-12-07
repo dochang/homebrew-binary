@@ -22,7 +22,7 @@ class Arduino < Formula
     end
 
     def extname
-      platform == :linux ? "tar.xz" : "zip"
+      OS.linux? ? "tar.xz" : "zip"
     end
   end
 
