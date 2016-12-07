@@ -24,9 +24,13 @@ class Hugo < Formula
       end
       raise "Platform not supported."
     end
+
+    def extname
+      OS.linux? ? "tar.gz" : "zip"
+    end
   end
 
-  url "https://github.com/spf13/hugo/releases/download/v#{version}/hugo_#{version}_#{URL_PLATFORM[platform]}.tar.gz"
+  url "https://github.com/spf13/hugo/releases/download/v#{version}/hugo_#{version}_#{URL_PLATFORM[platform]}.#{extname}"
   sha256 CHECKSUMS[platform]
 
   def install
