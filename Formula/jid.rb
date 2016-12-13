@@ -1,3 +1,5 @@
+VERSION = "0.6.1".freeze
+
 CHECKSUMS = {
   linux_amd64: "fe3df68d310ee36ec9c5416e71141206f9df25e4d65f0a86f4300cd822cf1ae9",
 }.freeze
@@ -5,7 +7,6 @@ CHECKSUMS = {
 class Jid < Formula
   desc "json incremental digger"
   homepage "https://github.com/simeji/jid"
-  version "0.6.1"
 
   class << self
     def platform
@@ -22,7 +23,8 @@ class Jid < Formula
     end
   end
 
-  url "https://github.com/simeji/jid/releases/download/#{version}/jid_#{platform}.zip"
+  url "https://github.com/simeji/jid/releases/download/#{VERSION}/jid_#{platform}.zip"
+  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

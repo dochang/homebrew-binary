@@ -1,3 +1,5 @@
+VERSION = "1.6.13".freeze
+
 CHECKSUMS = {
   linux64: "492b28d72b347227346592ceb0373af55558aab67acda343a8a15cc11ade154a",
 }.freeze
@@ -5,7 +7,6 @@ CHECKSUMS = {
 class Arduino < Formula
   desc "Arduino IDE"
   homepage "https://www.arduino.cc/"
-  version "1.6.13"
 
   class << self
     def platform
@@ -26,7 +27,8 @@ class Arduino < Formula
     end
   end
 
-  url "https://downloads.arduino.cc/arduino-#{version}-#{platform}.#{extname}"
+  url "https://downloads.arduino.cc/arduino-#{VERSION}-#{platform}.#{extname}"
+  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

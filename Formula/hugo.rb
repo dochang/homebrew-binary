@@ -1,3 +1,5 @@
+VERSION = "0.17".freeze
+
 CHECKSUMS = {
   linux_amd64: "f1467e204cc469b9ca6f17c0dc4da4a620643b6d9a50cb7dce2508aaf8fbc1ea",
 }.freeze
@@ -9,7 +11,6 @@ URL_PLATFORM = {
 class Hugo < Formula
   desc "Configurable static site generator"
   homepage "https://gohugo.io/"
-  version "0.17"
 
   class << self
     def platform
@@ -30,7 +31,8 @@ class Hugo < Formula
     end
   end
 
-  url "https://github.com/spf13/hugo/releases/download/v#{version}/hugo_#{version}_#{URL_PLATFORM[platform]}.#{extname}"
+  url "https://github.com/spf13/hugo/releases/download/v#{VERSION}/hugo_#{VERSION}_#{URL_PLATFORM[platform]}.#{extname}"
+  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

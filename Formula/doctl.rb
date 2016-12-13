@@ -1,3 +1,5 @@
+VERSION = "1.5.0".freeze
+
 CHECKSUMS = {
   "linux-amd64" => "a8735639c0b02bed700fb5791604b5fd4a86d43876c904b3df02016d32fba1ff",
 }.freeze
@@ -5,7 +7,6 @@ CHECKSUMS = {
 class Doctl < Formula
   desc "Command-line tool for DigitalOcean"
   homepage "https://github.com/digitalocean/doctl"
-  version "1.5.0"
 
   class << self
     def platform
@@ -22,7 +23,8 @@ class Doctl < Formula
     end
   end
 
-  url "https://github.com/digitalocean/doctl/releases/download/v#{version}/doctl-#{version}-#{platform}.tar.gz"
+  url "https://github.com/digitalocean/doctl/releases/download/v#{VERSION}/doctl-#{VERSION}-#{platform}.tar.gz"
+  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

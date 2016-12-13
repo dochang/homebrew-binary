@@ -1,3 +1,5 @@
+VERSION = "0.4.4".freeze
+
 CHECKSUMS = {
   "linux-amd64" => "32ea77ba170b86cafc62f9ad48f551a2a6db2f5792b678d048aeea50205e7a25",
 }.freeze
@@ -5,7 +7,6 @@ CHECKSUMS = {
 class Ipfs < Formula
   desc "Peer-to-peer hypermedia protocol"
   homepage "https://ipfs.io/"
-  version "0.4.4"
 
   class << self
     def platform
@@ -22,7 +23,8 @@ class Ipfs < Formula
     end
   end
 
-  url "https://dist.ipfs.io/go-ipfs/v#{version}/go-ipfs_v#{version}_#{platform}.tar.gz"
+  url "https://dist.ipfs.io/go-ipfs/v#{VERSION}/go-ipfs_v#{VERSION}_#{platform}.tar.gz"
+  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

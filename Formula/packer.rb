@@ -1,3 +1,5 @@
+VERSION = "0.12.0".freeze
+
 CHECKSUMS = {
   linux_amd64: "ce6362d527ba697e40b8c90a98d2034b7749e2357fa238b08536aed44f037073",
 }.freeze
@@ -5,7 +7,6 @@ CHECKSUMS = {
 class Packer < Formula
   desc "Tool for creating identical machine images for multiple platforms"
   homepage "https://www.packer.io/"
-  version "0.12.0"
 
   class << self
     def platform
@@ -22,7 +23,8 @@ class Packer < Formula
     end
   end
 
-  url "https://releases.hashicorp.com/packer/#{version}/packer_#{version}_#{platform}.zip"
+  url "https://releases.hashicorp.com/packer/#{VERSION}/packer_#{VERSION}_#{platform}.zip"
+  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install
