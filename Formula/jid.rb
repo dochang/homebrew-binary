@@ -1,7 +1,7 @@
-VERSION = "0.6.1".freeze
+VERSION = "0.6.2".freeze
 
 CHECKSUMS = {
-  linux_amd64: "fe3df68d310ee36ec9c5416e71141206f9df25e4d65f0a86f4300cd822cf1ae9",
+  linux_amd64: "17bf8657edd74e570286018d86a4a8835ced0e9ea1ea79b5284f9caa9355275f",
 }.freeze
 
 class Jid < Formula
