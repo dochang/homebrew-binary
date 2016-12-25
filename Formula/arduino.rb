@@ -1,7 +1,7 @@
-VERSION = "1.6.13".freeze
+VERSION = "1.8.0".freeze
 
 CHECKSUMS = {
-  linux64: "492b28d72b347227346592ceb0373af55558aab67acda343a8a15cc11ade154a",
+  linux64: "a16f4ca4b21bfc2bf98d7cee278d9c88c81cd7a172707d9a7198bf8aa3dac67c",
 }.freeze
 
 class Arduino < Formula
