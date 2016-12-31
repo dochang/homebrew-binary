@@ -1,7 +1,7 @@
-VERSION = "0.18".freeze
+VERSION = "0.18.1".freeze
 
 CHECKSUMS = {
-  linux_amd64: "9993f091dd3614401627a926571fb9f057f26c6d584581d79fc6c43fca436640",
+  linux_amd64: "cb462f41ff9620df89f69b85ccdea48cd789490bbab7a17d9c349dae76490add",
 }.freeze
 
 URL_PLATFORM = {
