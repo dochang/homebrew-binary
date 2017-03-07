@@ -1,7 +1,7 @@
-VERSION = "0.4.5".freeze
+VERSION = "0.4.6".freeze
 
 CHECKSUMS = {
-  "linux-amd64" => "2d3b937596eeea98230adf9f60b2f55fdb8701a0ad50936185fe8855ba96fd46",
+  "linux-amd64" => "09c6606bcdd32708e8cdbef7d82e0f0076b32c80e6dfc2cd7c2c06c8fe29ac1e",
 }.freeze
 
 class Ipfs < Formula
