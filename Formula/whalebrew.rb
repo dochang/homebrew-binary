@@ -1,7 +1,7 @@
-VERSION = "0.0.5".freeze
+VERSION = "0.1.0".freeze
 
 CHECKSUMS = {
-  "Linux-x86_64" => "72ebf15fe0bbc43b727243676bd3842ae024ffa2eab6da327132cd2c05fd5193",
+  "Linux-x86_64" => "f776cb3bc40fde0cd221e38159d2fa3a7933c4f8cf40a1dad257a09edb0e4af4",
 }.freeze
 
 class Whalebrew < Formula
