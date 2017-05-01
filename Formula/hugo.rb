@@ -1,11 +1,7 @@
-VERSION = "0.20.2".freeze
+VERSION = "0.20.6".freeze
 
 CHECKSUMS = {
-  linux_amd64: "7cbf607f981aa9366aa512a651400a7a06744beaf182345369a2cfbb6cf18420",
-}.freeze
-
-URL_PLATFORM = {
-  linux_amd64: "Linux-64bit",
+  "Linux-64bit" => "e251636d3c947ddbd826ee8bdd548e1a4bc7fbdae00909f2a3b24d0e3616d988",
 }.freeze
 
 class Hugo < Formula
@@ -19,24 +15,20 @@ class Hugo < Formula
         case
         when Hardware::CPU.intel?
           if Hardware::CPU.is_64_bit?
-            return :linux_amd64
+            return "Linux-64bit"
           end
         end
       end
       raise "Platform not supported."
     end
-
-    def extname
-      OS.linux? ? "tar.gz" : "zip"
-    end
   end
 
-  url "https://github.com/spf13/hugo/releases/download/v#{VERSION}/hugo_#{VERSION}_#{URL_PLATFORM[platform]}.#{extname}"
+  url "https://github.com/spf13/hugo/releases/download/v#{VERSION}/hugo_#{VERSION}_#{platform}.tar.gz"
   version VERSION
   sha256 CHECKSUMS[platform]
 
   def install
-    bin.install "hugo_#{self.class.version}_#{self.class.platform}" => "hugo"
+    bin.install "hugo"
   end
 
   test do
