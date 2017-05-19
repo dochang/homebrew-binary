@@ -1,7 +1,7 @@
-VERSION = "1.6.0".freeze
+VERSION = "1.6.1".freeze
 
 CHECKSUMS = {
-  "linux-amd64" => "889161a6fb593f3d4bf3e34345a819f9b4488a9f774248abe78ceef6f2f9c90e",
+  "linux-amd64" => "5b06cfecc2fa6c921f73188e3fd04ca12fd5472f648d9e670764f2b3d598a175",
 }.freeze
 
 class Doctl < Formula
