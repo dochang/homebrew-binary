@@ -1,7 +1,7 @@
-VERSION = "0.20.6".freeze
+VERSION = "0.20.7".freeze
 
 CHECKSUMS = {
-  "Linux-64bit" => "e251636d3c947ddbd826ee8bdd548e1a4bc7fbdae00909f2a3b24d0e3616d988",
+  "Linux-64bit" => "04f2c7d2f6ea500b0ead4821f035f334b7ac370154509653391bfccec1c4d524",
 }.freeze
 
 class Hugo < Formula
