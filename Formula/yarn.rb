@@ -1,11 +1,11 @@
-VERSION = "0.24.5".freeze
+VERSION = "0.24.6".freeze
 
 class Yarn < Formula
   desc "Javascript package manager"
   homepage "https://yarnpkg.com/"
 
   url "https://yarnpkg.com/downloads/#{VERSION}/yarn-v#{VERSION}.tar.gz"
-  sha256 "a7492431eedee0203faeac64e75f484e4911ab707c96c5bee4c7b97bf19c102c"
+  sha256 "c375ab86d4ca0b46addc5b462280bd42ddefb114ee0025d38044bb4610cd625d"
 
   def install
     prefix.install Dir["*"]
