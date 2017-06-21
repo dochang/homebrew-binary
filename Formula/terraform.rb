@@ -1,7 +1,7 @@
-VERSION = "0.9.6".freeze
+VERSION = "0.9.8".freeze
 
 CHECKSUMS = {
-  linux_amd64: "7ec24a5d57da6ef7bdb5a3003791a4368489b32fa93be800655ccef0eceaf1ba",
+  linux_amd64: "f951885f4e15deb4cf66f3b199964e3e74a0298bb46c9fe42e105df2ebcf3d16",
 }.freeze
 
 class Terraform < Formula
