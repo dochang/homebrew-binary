@@ -24,7 +24,6 @@ class Ripgrep < Formula
   end
 
   url "https://github.com/BurntSushi/ripgrep/releases/download/#{VERSION}/ripgrep-#{VERSION}-#{platform}.tar.gz"
-  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

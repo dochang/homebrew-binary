@@ -24,7 +24,6 @@ class Piknik < Formula
   end
 
   url "https://github.com/jedisct1/piknik/releases/download/#{VERSION}/piknik-#{platform}-#{VERSION}.tar.gz"
-  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install

@@ -28,7 +28,6 @@ class HaskellStack < Formula
   end
 
   url "https://github.com/commercialhaskell/stack/releases/download/v#{VERSION}/stack-#{VERSION}-#{URL_PLATFORM[platform]}.tar.gz"
-  version VERSION
   sha256 CHECKSUMS[platform]
 
   def install
