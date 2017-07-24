@@ -1,7 +1,7 @@
-VERSION = "0.24".freeze
+VERSION = "0.25.1".freeze
 
 CHECKSUMS = {
-  "Linux-64bit" => "2c916beb2f7ca286e843eba1a0e5686111381ee6a5b0e032ab965f22ba99cb2b",
+  "Linux-64bit" => "fbf8ca850aaaaad331f5b40bbbe8e797115dab296a8486a53c0561f253ca7b00",
 }.freeze
 
 class Hugo < Formula
@@ -23,7 +23,7 @@ class Hugo < Formula
     end
   end
 
-  url "https://github.com/spf13/hugo/releases/download/v#{VERSION}/hugo_#{VERSION}_#{platform}.tar.gz"
+  url "https://github.com/gohugoio/hugo/releases/download/v#{VERSION}/hugo_#{VERSION}_#{platform}.tar.gz"
   version VERSION
   sha256 CHECKSUMS[platform]
 
