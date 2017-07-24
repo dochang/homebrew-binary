@@ -1,7 +1,7 @@
-VERSION = "1.36".freeze
+VERSION = "1.37".freeze
 
 CHECKSUMS = {
-  "linux-amd64" => "aa34d338e9144df8a34bb60a9bc3a38d32b357dbce73a2c03523e4d070e8d935",
+  "linux-amd64" => "a0886f5e907cd19728d4c37699db0a3ea4b7e3f4e071c39883446b3322ac5617",
 }.freeze
 
 class Rclone < Formula
