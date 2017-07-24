@@ -1,7 +1,7 @@
-VERSION = "1.0.1".freeze
+VERSION = "1.0.3".freeze
 
 CHECKSUMS = {
-  linux_amd64: "b6e126a63a4a2bbe82f9d6bdd48ae879c4f4ffa256b2e1f9567887c321929641",
+  linux_amd64: "0e10169ef9cf3fd55dcc9dc213b9995170f7712e8a162ca2f5109d62bfbe7529",
 }.freeze
 
 class Packer < Formula
