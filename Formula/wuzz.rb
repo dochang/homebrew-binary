@@ -1,7 +1,7 @@
-VERSION = "0.3.0".freeze
+VERSION = "0.4.0".freeze
 
 CHECKSUMS = {
-  linux_amd64: "a956844dba446810d0910c8e8b77f2315e3b93a8e82cc45c7bcd273185477e17",
+  linux_amd64: "5a1443e07a5a9b9bb813804290e87fdd27b544f4fe00ef95fe3b64e7b56459ec",
 }.freeze
 
 class Wuzz < Formula
