@@ -1,7 +1,7 @@
-VERSION = "0.5.2".freeze
+VERSION = "0.6.0".freeze
 
 CHECKSUMS = {
-  "x86_64-unknown-linux-musl" => "ecb53ed7e9f3a1ebea76a4e517af42ffe1e778eab3b413200a3e543d033f68f5",
+  "x86_64-unknown-linux-musl" => "477b22380c826be5fa349ffe6c3f0ff0cab78200049cd2bacea4511a331e2457",
 }.freeze
 
 class Ripgrep < Formula
