@@ -1,7 +1,7 @@
-VERSION = "1.8.3".freeze
+VERSION = "1.9".freeze
 
 CHECKSUMS = {
-  "linux-amd64" => "1862f4c3d3907e59b04a757cfda0ea7aa9ef39274af99a784f5be843c80c6772",
+  "linux-amd64" => "d70eadefce8e160638a9a6db97f7192d8463069ab33138893ad3bf31b0650a79",
 }.freeze
 
 class Go < Formula
