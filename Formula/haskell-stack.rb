@@ -1,11 +1,7 @@
 VERSION = "1.5.1".freeze
 
 CHECKSUMS = {
-  linux_amd64: "6a250cbab60870f6b933c780c96c5cafb02d066a6f2d7182bb00ec005262842b",
-}.freeze
-
-URL_PLATFORM = {
-  linux_amd64: "linux-x86_64-static",
+  "linux-x86_64-static" => "6a250cbab60870f6b933c780c96c5cafb02d066a6f2d7182bb00ec005262842b",
 }.freeze
 
 class HaskellStack < Formula
@@ -19,7 +15,7 @@ class HaskellStack < Formula
         case
         when Hardware::CPU.intel?
           if Hardware::CPU.is_64_bit?
-            return :linux_amd64
+            return "linux-x86_64-static"
           end
         end
       end
@@ -27,7 +23,7 @@ class HaskellStack < Formula
     end
   end
 
-  url "https://github.com/commercialhaskell/stack/releases/download/v#{VERSION}/stack-#{VERSION}-#{URL_PLATFORM[platform]}.tar.gz"
+  url "https://github.com/commercialhaskell/stack/releases/download/v#{VERSION}/stack-#{VERSION}-#{platform}.tar.gz"
   sha256 CHECKSUMS[platform]
 
   def install
