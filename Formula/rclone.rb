@@ -1,31 +1,22 @@
-VERSION = "1.37".freeze
-
-CHECKSUMS = {
-  "linux-amd64" => "a0886f5e907cd19728d4c37699db0a3ea4b7e3f4e071c39883446b3322ac5617",
-}.freeze
-
 class Rclone < Formula
   desc "rsync for cloud storage"
   homepage "https://rclone.org/"
 
-  class << self
-    def platform
-      case
-      when OS.linux?
-        case
-        when Hardware::CPU.intel?
-          if Hardware::CPU.is_64_bit?
-            return "linux-amd64"
-          end
-        end
+  case
+  when OS.linux?
+    case
+    when Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://downloads.rclone.org/rclone-v1.37-linux-amd64.zip"
+        version "1.37"
+        sha256 "a0886f5e907cd19728d4c37699db0a3ea4b7e3f4e071c39883446b3322ac5617"
       end
-      raise "Platform not supported."
     end
   end
 
-  url "https://downloads.rclone.org/rclone-v#{VERSION}-#{platform}.zip"
-  version VERSION
-  sha256 CHECKSUMS[platform]
+  unless stable.url
+    raise "Platform not supported."
+  end
 
   def install
     bin.install "rclone"

@@ -1,30 +1,21 @@
-VERSION = "0.6.0".freeze
-
-CHECKSUMS = {
-  "x86_64-unknown-linux-musl" => "477b22380c826be5fa349ffe6c3f0ff0cab78200049cd2bacea4511a331e2457",
-}.freeze
-
 class Ripgrep < Formula
   desc "ripgrep combines the usability of The Silver Searcher with the raw speed of grep."
   homepage "https://github.com/BurntSushi/ripgrep"
 
-  class << self
-    def platform
-      case
-      when OS.linux?
-        case
-        when Hardware::CPU.intel?
-          if Hardware::CPU.is_64_bit?
-            return "x86_64-unknown-linux-musl"
-          end
-        end
+  case
+  when OS.linux?
+    case
+    when Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/BurntSushi/ripgrep/releases/download/0.6.0/ripgrep-0.6.0-x86_64-unknown-linux-musl.tar.gz"
+        sha256 "477b22380c826be5fa349ffe6c3f0ff0cab78200049cd2bacea4511a331e2457"
       end
-      raise "Platform not supported."
     end
   end
 
-  url "https://github.com/BurntSushi/ripgrep/releases/download/#{VERSION}/ripgrep-#{VERSION}-#{platform}.tar.gz"
-  sha256 CHECKSUMS[platform]
+  unless stable.url
+    raise "Platform not supported."
+  end
 
   def install
     bin.install "rg"
