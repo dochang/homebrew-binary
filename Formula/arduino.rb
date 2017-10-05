@@ -7,9 +7,9 @@ class Arduino < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.arduino.cc/arduino-1.8.4-linux64.tar.xz"
-        version "1.8.4"
-        sha256 "3f6434deadaef085dd2545b1ccaaa134d9c57d7df94cdba051cb5d7e53ef0fc6"
+        url "https://downloads.arduino.cc/arduino-1.8.5-linux64.tar.xz"
+        version "1.8.5"
+        sha256 "bdf985da7289c02f8b7761a9a524921f6535fe4cec27a5fc57ce305afc1a1ab9"
       end
     end
   end
