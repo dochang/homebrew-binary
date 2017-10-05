@@ -7,9 +7,9 @@ class Go < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz"
-        version "1.9"
-        sha256 "d70eadefce8e160638a9a6db97f7192d8463069ab33138893ad3bf31b0650a79"
+        url "https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz"
+        version "1.9.1"
+        sha256 "07d81c6b6b4c2dcf1b5ef7c27aaebd3691cdb40548500941f92b221147c5d9c7"
       end
     end
   end
