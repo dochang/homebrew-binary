@@ -7,9 +7,9 @@ class Doctl < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/digitalocean/doctl/releases/download/v1.7.0/doctl-1.7.0-linux-amd64.tar.gz"
-        version "1.7.0"
-        sha256 "a47bc17f2a10c138d84a06f7e793398897c616cdce75b85a4a10349f78be20c2"
+        url "https://github.com/digitalocean/doctl/releases/download/v1.7.1/doctl-1.7.1-linux-amd64.tar.gz"
+        version "1.7.1"
+        sha256 "48ce63e156f65922f73678011279cf6d13e0971a76fcc87a3a7ff17eed33db78"
       end
     end
   end
