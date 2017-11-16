@@ -7,9 +7,9 @@ class Ipfs < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://dist.ipfs.io/go-ipfs/v0.4.11/go-ipfs_v0.4.11_linux-amd64.tar.gz"
-        version "0.4.11"
-        sha256 "a638ac436597ba20b1a25b289b8c89cfa31a1fc7399de66a35ba04e45562b482"
+        url "https://dist.ipfs.io/go-ipfs/v0.4.12/go-ipfs_v0.4.12_linux-amd64.tar.gz"
+        version "0.4.12"
+        sha256 "da0f78445656379d6704d7d1e52245ce6d21cfdbc21b5238dcfd49beb74a1d0a"
       end
     end
   end
