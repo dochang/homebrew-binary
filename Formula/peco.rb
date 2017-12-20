@@ -7,9 +7,9 @@ class Peco < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/peco/peco/releases/download/v0.5.1/peco_linux_amd64.tar.gz"
-        version "0.5.1"
-        sha256 "75b0c2d6ae671e47936d505cd10c38e91ad3a2a7a2150b5f2d8ff3522c441a31"
+        url "https://github.com/peco/peco/releases/download/v0.5.2/peco_linux_amd64.tar.gz"
+        version "0.5.2"
+        sha256 "3dfb85c44c68cd10584c9813f96bd979ae1118735819eda9588cc4ef8adcb99f"
       end
     end
   end
