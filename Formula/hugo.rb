@@ -7,9 +7,9 @@ class Hugo < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gohugoio/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.tar.gz"
-        version "0.30.2"
-        sha256 "a192577471f2c5b7a6f26ce8ec6effd9e274ffb8672c1a810af0a6384b4de8cd"
+        url "https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.tar.gz"
+        version "0.31.1"
+        sha256 "2ec6fd0493fa246a5747b0f1875d94affaaa30f11715f26abcbe1bc91c940716"
       end
     end
   end
