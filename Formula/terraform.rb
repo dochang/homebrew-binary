@@ -7,9 +7,9 @@ class Terraform < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.hashicorp.com/terraform/0.10.8/terraform_0.10.8_linux_amd64.zip"
-        version "0.10.8"
-        sha256 "b786c0cf936e24145fad632efd0fe48c831558cc9e43c071fffd93f35e3150db"
+        url "https://releases.hashicorp.com/terraform/0.11.1/terraform_0.11.1_linux_amd64.zip"
+        version "0.11.1"
+        sha256 "4e3d5e4c6a267e31e9f95d4c1b00f5a7be5a319698f0370825b459cb786e2f35"
       end
     end
   end
