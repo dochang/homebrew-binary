@@ -1,6 +1,6 @@
 dist: trusty
 language: ruby
-rvm: 2.0.0
+rvm: system
 sudo: false
 
 addons:
@@ -17,6 +17,7 @@ env:
     - LINUXBREW=$HOME/.linuxbrew
     - HOMEBREW_DEVELOPER=1
     - HOMEBREW_NO_AUTO_UPDATE=1
+    - HOMEBREW_FORCE_VENDOR_RUBY=1
     - secure: "mD0zR8CE/HqFTMdJSb8YzcI2cK8ZDMQgU/CV62mV8X8BZrwFiac+VgYoqHsIurmPvyDaticfTwv8A/i5mm+u48HGH/kWnoUNqbIlBIFWQYVZUu/Re0xCaKikclArVhbZGgXpTsi10RhHI8stfycnnGlD3+SLYhj06SanFD3Mj0tqs6oDozTWgxbP4QFuSPTslMK1D8auwKcRqp3GHkurYSKwFtlZFO/EaKlW/UR8oMh90dqUSFUa6+OKiP/8YEI2yrnEPPWszf7BQ9MEJjlUQnRkVdPh5n5op/S3iDNfYwuer6E12c/gC55FqP+0uSNK+BuQgiZVvNuYP6BQ6obuq4ucQUEMUAUc0FeZI7STgcmZ+Foe66ZTsZRk0q6jXfy//qUzXKIzJpShKolH9TQfuzsxUuNtMMiRNd6UR//8yXMSjc1AQJUYJXLw73w5yuSIfh6jm8gfLJ6LsNP2nkdG42zuZi/KgKXSVQ0hv0LaalVw13QGZRr7p46Vrm/hV6f19uMafh6Jc5fKmhAAIkJMQEbLkoxSQE39KsWOOCqfZDZJ447EhqOYRAsFCA+vE3NPnP7JyDKzwqGjrQ5kSeYt4zlVotvKrrBAnM213lqer8II94uPvfUCTgovp55Dbn0FT3TQtCBH/MLs3gAqMHl7i3n7+itEBSn2yedtCSQmBDc="
 
 before_install:
