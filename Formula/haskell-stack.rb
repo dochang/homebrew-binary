@@ -7,8 +7,8 @@ class HaskellStack < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/commercialhaskell/stack/releases/download/v1.6.1/stack-1.6.1-linux-x86_64-static.tar.gz"
-        sha256 "5f7ad6f2934561beb296d472f77034033c38a89a2ec2aeba78edcbb0034af80e"
+        url "https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64-static.tar.gz"
+        sha256 "c16b6b1fc31edb203dac9cd3745872c25ea088f12ca19dffb368de73e8b2b89b"
       end
     end
   end
