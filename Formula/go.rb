@@ -7,7 +7,7 @@ class Go < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://redirector.gvt1.com/edgedl/go/go1.9.2.linux-amd64.tar.gz"
+        url "https://dl.google.com/go/go1.9.2.linux-amd64.tar.gz"
         version "1.9.2"
         sha256 "de874549d9a8d8d8062be05808509c09a88a248e77ec14eb77453530829ac02b"
       end
