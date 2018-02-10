@@ -7,9 +7,9 @@ class Packer < Formula
     case
     when Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.hashicorp.com/packer/1.1.3/packer_1.1.3_linux_amd64.zip"
-        version "1.1.3"
-        sha256 "b7982986992190ae50ab2feb310cb003a2ec9c5dcba19aa8b1ebb0d120e8686f"
+        url "https://releases.hashicorp.com/packer/1.2.0/packer_1.2.0_linux_amd64.zip"
+        version "1.2.0"
+        sha256 "d1b0fcc4e66dfe4919c25752d028a4e4466921bf0e3f75be3bbf1c85082e8040"
       end
     end
   end
