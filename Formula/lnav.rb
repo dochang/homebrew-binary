@@ -7,11 +7,11 @@ class Lnav < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/tstack/lnav/releases/download/v0.8.2/lnav-0.8.2-linux-64bit.zip"
-        sha256 "ce16ebc4dc05cf825d728daeb0491778e6997b83fb632b418ac1a60e38155022"
+        url "https://github.com/tstack/lnav/releases/download/v0.8.3/lnav-0.8.3-linux-64bit.zip"
+        sha256 "d20c44f0159a1a34f21854bb90fd7cde0054dfaa831dd4c3b9b362a7db3feab0"
       when :arm
         url "file://#{__FILE__}"
-        version "0.8.2"
+        version "0.8.3"
       end
     end
   end
