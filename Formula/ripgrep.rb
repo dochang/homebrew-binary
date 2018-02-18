@@ -6,11 +6,12 @@ class Ripgrep < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz"
-        sha256 "ac595c2239b9a30e0e0744578afa6b73e32cdd8ae61d4f1c0ee5d6b55adbadcf"
+        url "https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep-0.8.0-x86_64-unknown-linux-musl.tar.gz"
+        sha256 "621f2f16f65203aa37e7c10ecfb22384c4c01e70ebbd30a13c0d6944ffc6e59e"
       when :arm
-        url "file://#{__FILE__}"
-        version "0.7.1"
+        url "https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep-0.8.0-arm-unknown-linux-gnueabihf.tar.gz"
+        version "0.8.0"
+        sha256 "1faaaaa6f4583d751e10333e0c706eac77f8ab8ee0605d85d25c09785c5d97bc"
       end
     end
   end
@@ -19,9 +20,10 @@ class Ripgrep < Formula
     odie "Platform not supported." if active_spec.url == "file://#{__FILE__}"
 
     bin.install "rg"
-    man1.install "rg.1"
+    man1.install "doc/rg.1" unless OS.linux? && Hardware::CPU.arch == :arm
+    doc.install Dir["doc/*"]
 
-    bash_completion.install "complete/rg.bash-completion"
+    bash_completion.install "complete/rg.bash"
     fish_completion.install "complete/rg.fish"
     zsh_completion.install "complete/_rg"
   end
