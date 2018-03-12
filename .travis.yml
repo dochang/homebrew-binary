@@ -1,7 +1,14 @@
 dist: trusty
 language: ruby
-rvm: system
+# rubocop (>= 0.51.0) depends on ruby (>= 2.1.0)
+#
+# https://github.com/bbatsov/rubocop/blob/v0.51.0/CHANGELOG.md#changes
+# https://github.com/bbatsov/rubocop/pull/4787
+rvm:
+  - 2.1.0
 sudo: false
+cache:
+  bundler: true
 
 addons:
   apt:
@@ -30,6 +37,13 @@ before_install:
   - mkdir -p $(dirname "$HOMEBREW_TAP_DIR")
   - ln -s "$TRAVIS_BUILD_DIR" "$HOMEBREW_TAP_DIR"
   - ulimit -n 1024
+  # Ensure bundler installed
+  #
+  # https://github.com/travis-ci/travis-ci/issues/5578#issuecomment-188513842
+  - export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+  - gem update --user-install
+  - gem install --user-install bundler
 
 script:
+  - bundle exec rubocop
   - brew test-bot
