@@ -23,6 +23,6 @@ class Rclone < Formula
   end
 
   test do
-    system "#{bin}/rclone", "version"
+    system bin/"rclone", "version"
   end
 end

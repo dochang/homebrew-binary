@@ -20,6 +20,6 @@ class Piknik < Formula
   end
 
   test do
-    system "#{bin}/piknik", "-version"
+    system bin/"piknik", "-version"
   end
 end

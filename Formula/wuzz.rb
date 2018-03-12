@@ -27,6 +27,6 @@ class Wuzz < Formula
   end
 
   test do
-    system "#{bin}/wuzz", "--version"
+    system bin/"wuzz", "--version"
   end
 end

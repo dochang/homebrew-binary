@@ -10,6 +10,6 @@ class Yarn < Formula
   end
 
   test do
-    system "#{bin}/yarn", "--version"
+    system bin/"yarn", "--version"
   end
 end

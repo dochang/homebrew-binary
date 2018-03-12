@@ -22,6 +22,6 @@ class Sift < Formula
   end
 
   test do
-    system "#{bin}/sift", "--version"
+    system bin/"sift", "--version"
   end
 end

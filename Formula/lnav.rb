@@ -23,6 +23,6 @@ class Lnav < Formula
   end
 
   test do
-    system "#{bin}/lnav", "-V"
+    system bin/"lnav", "-V"
   end
 end

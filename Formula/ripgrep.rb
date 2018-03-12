@@ -29,6 +29,6 @@ class Ripgrep < Formula
   end
 
   test do
-    system "#{bin}/rg", "--version"
+    system bin/"rg", "--version"
   end
 end

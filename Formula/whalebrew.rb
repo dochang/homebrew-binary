@@ -28,6 +28,6 @@ class Whalebrew < Formula
   end
 
   test do
-    system "#{bin}/whalebrew", "version"
+    system bin/"whalebrew", "version"
   end
 end

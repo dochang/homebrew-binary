@@ -22,6 +22,6 @@ class Pandoc < Formula
   end
 
   test do
-    system "#{bin}/pandoc", "--version"
+    system bin/"pandoc", "--version"
   end
 end

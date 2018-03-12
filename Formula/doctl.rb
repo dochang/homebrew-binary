@@ -23,6 +23,6 @@ class Doctl < Formula
   end
 
   test do
-    system "#{bin}/doctl", "version"
+    system bin/"doctl", "version"
   end
 end

@@ -22,6 +22,6 @@ class CloudflareWarp < Formula
   end
 
   test do
-    system "#{bin}/cloudflare-warp", "--version"
+    system bin/"cloudflare-warp", "--version"
   end
 end

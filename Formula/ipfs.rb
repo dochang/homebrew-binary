@@ -22,6 +22,6 @@ class Ipfs < Formula
   end
 
   test do
-    system "#{bin}/ipfs", "version"
+    system bin/"ipfs", "version"
   end
 end

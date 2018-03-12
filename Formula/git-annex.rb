@@ -25,6 +25,6 @@ class GitAnnex < Formula
   end
 
   test do
-    system "#{bin}/git-annex", "version"
+    system bin/"git-annex", "version"
   end
 end

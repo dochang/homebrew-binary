@@ -22,6 +22,6 @@ class Packer < Formula
   end
 
   test do
-    system "#{bin}/packer", "version"
+    system bin/"packer", "version"
   end
 end

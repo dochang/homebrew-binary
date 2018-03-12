@@ -22,6 +22,6 @@ class Terraform < Formula
   end
 
   test do
-    system "#{bin}/terraform", "version"
+    system bin/"terraform", "version"
   end
 end

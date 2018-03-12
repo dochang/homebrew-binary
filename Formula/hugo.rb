@@ -22,6 +22,6 @@ class Hugo < Formula
   end
 
   test do
-    system "#{bin}/hugo", "version"
+    system bin/"hugo", "version"
   end
 end

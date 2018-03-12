@@ -22,6 +22,6 @@ class Go < Formula
   end
 
   test do
-    system "#{bin}/go", "version"
+    system bin/"go", "version"
   end
 end
