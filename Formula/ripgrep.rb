@@ -16,12 +16,19 @@ class Ripgrep < Formula
     end
   end
 
+  # Put these in a method to fix RuboCop [Metrics/AbcSize][1] error
+  #
+  # [1]: https://rubocop.readthedocs.io/en/latest/cops_metrics/#metricsabcsize
+  def install_doc
+    man1.install "doc/rg.1" unless OS.linux? && Hardware::CPU.arch == :arm
+    doc.install Dir["doc/*"]
+  end
+
   def install
     odie "Platform not supported." if active_spec.url == "file://#{__FILE__}"
 
     bin.install "rg"
-    man1.install "doc/rg.1" unless OS.linux? && Hardware::CPU.arch == :arm
-    doc.install Dir["doc/*"]
+    install_doc
 
     bash_completion.install "complete/rg.bash"
     fish_completion.install "complete/rg.fish"
