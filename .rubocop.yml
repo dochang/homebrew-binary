@@ -26,6 +26,8 @@ Style/FrozenStringLiteralComment:
   # But some files, such as `Gemfile`, contains this comment by default.  So do
   # not set `EnforcedStyle` to `never`.  Just disable it.
   Enabled: false
+Style/HashSyntax:
+  EnforcedStyle: no_mixed_keys
 Style/StringLiterals:
   # Homebrew uses double quotes string literals in Formulas
   EnforcedStyle: double_quotes
