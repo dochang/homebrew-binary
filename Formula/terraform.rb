@@ -6,13 +6,13 @@ class Terraform < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip"
-        version "0.11.3"
-        sha256 "6b8a7b83954597d36bbed23913dd51bc253906c612a070a21db373eab71b277b"
+        url "https://releases.hashicorp.com/terraform/0.11.5/terraform_0.11.5_linux_amd64.zip"
+        version "0.11.5"
+        sha256 "131c440263382c79c7f783b70ff35cd1d03eb31c44f7738d153d95a0b8436ac9"
       when :arm
-        url "https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_arm.zip"
-        version "0.11.3"
-        sha256 "557e5f37633c88128f323cfbaf53b4bd05c74f2b91a11dacf889bdd56af40c5d"
+        url "https://releases.hashicorp.com/terraform/0.11.5/terraform_0.11.5_linux_arm.zip"
+        version "0.11.5"
+        sha256 "ec4188d32a8bf0d95616d5290c33c1b4528a13c91916784eb1eb80bae830ec4e"
       end
     end
   end
