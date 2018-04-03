@@ -6,13 +6,13 @@ class Packer < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://releases.hashicorp.com/packer/1.2.0/packer_1.2.0_linux_amd64.zip"
-        version "1.2.0"
-        sha256 "d1b0fcc4e66dfe4919c25752d028a4e4466921bf0e3f75be3bbf1c85082e8040"
+        url "https://releases.hashicorp.com/packer/1.2.2/packer_1.2.2_linux_amd64.zip"
+        version "1.2.2"
+        sha256 "6575f8357a03ecad7997151234b1b9f09c7a5cf91c194b23a461ee279d68c6a8"
       when :arm
-        url "https://releases.hashicorp.com/packer/1.2.0/packer_1.2.0_linux_arm.zip"
-        version "1.2.0"
-        sha256 "147c6198acbb423322c00925bbb49a4497ccdae915c1f9595b9c132bb5d02a28"
+        url "https://releases.hashicorp.com/packer/1.2.2/packer_1.2.2_linux_arm.zip"
+        version "1.2.2"
+        sha256 "fc0667a5774f042739f258e7156d1f7a628920d2ebfc916aa0791ca056080230"
       end
     end
   end
