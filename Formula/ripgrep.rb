@@ -24,15 +24,18 @@ class Ripgrep < Formula
     doc.install Dir["doc/*"]
   end
 
+  def install_completions
+    bash_completion.install "complete/rg.bash"
+    fish_completion.install "complete/rg.fish"
+    zsh_completion.install "complete/_rg"
+  end
+
   def install
     odie "Platform not supported." if active_spec.url == "file://#{__FILE__}"
 
     bin.install "rg"
     install_doc
-
-    bash_completion.install "complete/rg.bash"
-    fish_completion.install "complete/rg.fish"
-    zsh_completion.install "complete/_rg"
+    install_completions
   end
 
   test do
