@@ -6,13 +6,13 @@ class Rclone < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://downloads.rclone.org/v1.40/rclone-v1.40-linux-amd64.zip"
-        version "1.40"
-        sha256 "a11022c2d7bd0b2a641b98011e587c04e21589c6059e9581721c0cbf5d8fe178"
+        url "https://downloads.rclone.org/v1.41/rclone-v1.41-linux-amd64.zip"
+        version "1.41"
+        sha256 "ae8dee585c013ac0b64dee22cf788d9458f44c536a8edcc45d25f091703c3f2e"
       when :arm
-        url "https://downloads.rclone.org/v1.40/rclone-v1.40-linux-arm.zip"
-        version "1.40"
-        sha256 "edfa9f606428edd0ef55c22e608b7c0ddeb180c8cec48b3aea1388aed22865c4"
+        url "https://downloads.rclone.org/v1.41/rclone-v1.41-linux-arm.zip"
+        version "1.41"
+        sha256 "91e3a747c64a1f15920cf9a7ea5a59f41d222810eeebaeec186fdefabe96cb20"
       end
     end
   end
