@@ -9,13 +9,13 @@ class Cloudflared < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-2018.4.5-linux-amd64.tgz"
-        version "2018.4.5"
-        sha256 "10279065c0d5be6c196e1fcfa7de208e42c6790fd806966dea23f5b07e25365c"
+        url "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-2018.4.8-linux-amd64.tgz"
+        version "2018.4.8"
+        sha256 "3ee4ad2ba696d33d9c85a0c00923e8636a4c70b0fa1cf8877d99c11ec1dd5d98"
       when :arm
-        url "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-2018.4.5-linux-arm.tgz"
-        version "2018.4.5"
-        sha256 "ef5b81eb94b4339b11bb15d66bdd8972b355af18cbc063e7e55bc50586401da0"
+        url "https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-2018.4.8-linux-arm.tgz"
+        version "2018.4.8"
+        sha256 "9b7db92db9b22888c990971d988b6f4b032eb9fa9095befd140402a7c5823d3f"
       end
     end
   end
