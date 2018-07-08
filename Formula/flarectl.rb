@@ -6,11 +6,11 @@ class Flarectl < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/cloudflare/cloudflare-go/releases/download/v0.8.4/flarectl.linux.amd64"
-        sha256 "5548247cb0c11b7b38681d0d2e3d28209aaeb7e17f16d792230685ab16dc52dd"
+        url "https://github.com/cloudflare/cloudflare-go/releases/download/v0.8.5/flarectl.linux.amd64"
+        sha256 "af511e425cda323761565ca9d9cc081d955db8100b654bad0659081dfd12ae8d"
       when :arm
         url "file://#{__FILE__}"
-        version "0.8.4"
+        version "0.8.5"
       end
     end
   end
