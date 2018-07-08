@@ -6,18 +6,19 @@ class Packer < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://releases.hashicorp.com/packer/1.2.3/packer_1.2.3_linux_amd64.zip"
-        version "1.2.3"
-        sha256 "822fe76c2dfe699f187ef8c44537d10453a1545db620e40b345cf6991a690f7d"
+        url "https://releases.hashicorp.com/packer/1.2.4/packer_1.2.4_linux_amd64.zip"
+        version "1.2.4"
+        sha256 "258d1baa23498932baede9b40f2eca4ac363b86b32487b36f48f5102630e9fbb"
       when :arm
-        url "https://releases.hashicorp.com/packer/1.2.3/packer_1.2.3_linux_arm.zip"
-        version "1.2.3"
-        sha256 "bbc797a9e429e4ec30e03a389e6ebd54197657d6cc32b0f8434aac91cc2f316c"
+        url "file://#{__FILE__}"
+        version "1.2.4"
       end
     end
   end
 
   def install
+    odie "Platform not supported." if active_spec.url == "file://#{__FILE__}"
+
     bin.install "packer"
   end
 
