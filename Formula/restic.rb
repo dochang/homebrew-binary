@@ -6,13 +6,13 @@ class Restic < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/restic/restic/releases/download/v0.8.3/restic_0.8.3_linux_amd64.bz2"
-        version "0.8.3"
-        sha256 "1e9aca80c4f4e263c72a83d4333a9dac0e24b24e1fe11a8dc1d9b38d77883705"
+        url "https://github.com/restic/restic/releases/download/v0.9.1/restic_0.9.1_linux_amd64.bz2"
+        version "0.9.1"
+        sha256 "f7f76812fa26ca390029216d1378e5504f18ba5dde790878dfaa84afef29bda7"
       when :arm
-        url "https://github.com/restic/restic/releases/download/v0.8.3/restic_0.8.3_linux_arm.bz2"
-        version "0.8.3"
-        sha256 "6f252952b482ffac286cfec43774b6f510ad7f47eb7332ce8bbddc1400a91ec3"
+        url "https://github.com/restic/restic/releases/download/v0.9.1/restic_0.9.1_linux_arm.bz2"
+        version "0.9.1"
+        sha256 "0ac18d8f1ea7306f3d76df0d034de4b2ae839027e88a86073f4745cfa181af2c"
       end
     end
   end
