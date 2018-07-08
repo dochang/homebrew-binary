@@ -6,13 +6,13 @@ class Hugo < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/gohugoio/hugo/releases/download/v0.40.1/hugo_0.40.1_Linux-64bit.tar.gz"
-        version "0.40.1"
-        sha256 "004af6326a331f7e0e2ae2145a4263e36c9a15cb9dcf1d0d9dac4bbdf6d678d5"
+        url "https://github.com/gohugoio/hugo/releases/download/v0.42.2/hugo_0.42.2_Linux-64bit.tar.gz"
+        version "0.42.2"
+        sha256 "7759102158b592ef6e96c60f0409e99a476ef550dc8f3b529242aa9cc321c862"
       when :arm
-        url "https://github.com/gohugoio/hugo/releases/download/v0.40.1/hugo_0.40.1_Linux-ARM.tar.gz"
-        version "0.40.1"
-        sha256 "c77690927867caccc2ba1d33443161c7af732dc9622a23aee95d6dc60c6a2851"
+        url "https://github.com/gohugoio/hugo/releases/download/v0.42.2/hugo_0.42.2_Linux-ARM.tar.gz"
+        version "0.42.2"
+        sha256 "20d569a9283c89f3b3e7f27915df3edd9b46b849b19570414f0ac2ca04f3d7fb"
       end
     end
   end
