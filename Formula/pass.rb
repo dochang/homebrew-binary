@@ -1,8 +1,8 @@
 class Pass < Formula
   desc "Password manager"
   homepage "https://www.passwordstore.org/"
-  url "https://git.zx2c4.com/password-store/snapshot/password-store-1.7.1.tar.xz"
-  sha256 "f6d2199593398aaefeaa55e21daddfb7f1073e9e096af6d887126141e99d9869"
+  url "https://git.zx2c4.com/password-store/snapshot/password-store-1.7.2.tar.xz"
+  sha256 "4768c5e1965c4d2aeb28818681e484fb105b6f46cbd75a97608615c4ec6980ea"
   revision 1
   head "https://git.zx2c4.com/password-store", :using => :git
 
