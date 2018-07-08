@@ -10,12 +10,12 @@ class GitAnnex < Formula
       case Hardware::CPU.arch
       when :x86_64
         url "https://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-amd64.tar.gz"
-        version "6.20180426"
-        sha256 "571ae28f1b2e0cedf3fd2c41234a81bfa628efe75f2dbeb43b405dfaaae1a9c3"
+        version "6.20180626"
+        sha256 "397dbed50b3145f4aecb01776694763528b784ceb40b6f9def33933589be7b23"
       when :arm
         url "https://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-armel.tar.gz"
-        version "6.20180426"
-        sha256 "46fcb71cfc87a5c5a3f3e36f958851a145a3b78154c7e21b8de2f2cd5746b91c"
+        version "6.20180626"
+        sha256 "2aa7d88f31710135da7189f1395423b04e8318b8ffa13d5b204a271fe4ec5ec3"
       end
     end
   end
