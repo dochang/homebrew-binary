@@ -6,12 +6,12 @@ class Ripgrep < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep-0.8.1-x86_64-unknown-linux-musl.tar.gz"
-        sha256 "08b1aa1440a23a88c94cff41a860340ecf38e9108817aff30ff778c00c63eb76"
+        url "https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep-0.9.0-x86_64-unknown-linux-musl.tar.gz"
+        sha256 "2eb4443e58f95051ff76ea036ed1faf940d5a04af4e7ff5a7dbd74576b907e99"
       when :arm
-        url "https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep-0.8.1-arm-unknown-linux-gnueabihf.tar.gz"
-        version "0.8.1"
-        sha256 "211414cdfed32b27479a14dd21e49d11fa02a24fb396051ef53af67b9141b3cd"
+        url "https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep-0.9.0-arm-unknown-linux-gnueabihf.tar.gz"
+        version "0.9.0"
+        sha256 "c6cf40e2766c408c5c1cebfda3d5efa2af3ce9ff89f018d30e43d36aa2337719"
       end
     end
   end
