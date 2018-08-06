@@ -5,13 +5,16 @@ class GitAnnex < Formula
   # Check [hackage] page for new versions
   #
   # [hackage]: https://hackage.haskell.org/package/git-annex
+  #
+  # Use `strings git-annex.linux/shimmed/git-annex/git-annex` to find the
+  # version.
   stable do
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
         url "https://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-amd64.tar.gz"
-        version "6.20180626"
-        sha256 "397dbed50b3145f4aecb01776694763528b784ceb40b6f9def33933589be7b23"
+        version "6.20180719"
+        sha256 "fa14d666591c3565c77c6ef0a43b41575fa55f1b41e8c910defef10931738d56"
       when :arm
         url "https://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-armel.tar.gz"
         version "6.20180626"
