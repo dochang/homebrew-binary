@@ -6,11 +6,11 @@ class Pandoc < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-linux.tar.gz"
-        sha256 "3b1b573cdf957b4102c42ce6f5a641787267a55a5e88dcca942fd471c25793cb"
+        url "https://github.com/jgm/pandoc/releases/download/2.2.2.1/pandoc-2.2.2.1-linux.tar.gz"
+        sha256 "c04d02033ff8d1c7dd4201419089bd5cdc62ef4b8af622f4f965788869732d7b"
       when :arm
         url "file://#{__FILE__}"
-        version "2.2.1"
+        version "2.2.2.1"
       end
     end
   end
