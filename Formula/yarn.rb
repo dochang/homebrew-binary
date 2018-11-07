@@ -2,8 +2,8 @@ class Yarn < Formula
   desc "Javascript package manager"
   homepage "https://yarnpkg.com/"
 
-  url "https://yarnpkg.com/downloads/1.9.4/yarn-v1.9.4.tar.gz"
-  sha256 "7667eb715077b4bad8e2a832e7084e0e6f1ba54d7280dc573c8f7031a7fb093e"
+  url "https://yarnpkg.com/downloads/1.12.1/yarn-v1.12.1.tar.gz"
+  sha256 "09bea8f4ec41e9079fa03093d3b2db7ac5c5331852236d63815f8df42b3ba88d"
 
   def install
     prefix.install Dir["*"]
