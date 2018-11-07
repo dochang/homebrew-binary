@@ -6,11 +6,11 @@ class HaskellStack < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/commercialhaskell/stack/releases/download/v1.7.1/stack-1.7.1-linux-x86_64.tar.gz"
-        sha256 "647306bbf65dd0b555486e2a32776ba1cfe0c8f380e31c6aa93abd452cb209ee"
+        url "https://github.com/commercialhaskell/stack/releases/download/v1.9.1/stack-1.9.1-linux-x86_64-static.tar.gz"
+        sha256 "332e5d0421e7a1afc96985050d985c0d2ba651f91dc2565faa5abfdef9d2a095"
       when :arm
-        url "https://github.com/commercialhaskell/stack/releases/download/v1.7.1/stack-1.7.1-linux-arm.tar.gz"
-        sha256 "0d79990b7d38c41203a031c842938c7fdc280f5d5d4f411cd91c7c53609eff76"
+        url "https://github.com/commercialhaskell/stack/releases/download/v1.9.1/stack-1.9.1-linux-arm.tar.gz"
+        sha256 "c400d6403d6d138754056327465cec7ef113d75b5d7ee26e9476268ca1dd946f"
       end
     end
   end
