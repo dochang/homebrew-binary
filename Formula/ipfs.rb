@@ -6,13 +6,13 @@ class Ipfs < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://dist.ipfs.io/go-ipfs/v0.4.17/go-ipfs_v0.4.17_linux-amd64.tar.gz"
-        version "0.4.17"
-        sha256 "1bb1050ebe74f9042ac721eb1b71f92e1b0e78e54c59dadfde13080facb2901c"
+        url "https://dist.ipfs.io/go-ipfs/v0.4.18/go-ipfs_v0.4.18_linux-amd64.tar.gz"
+        version "0.4.18"
+        sha256 "21e6c44c0fa8edf91a727f1e8257342a4c3a879462e656861b0a179e1f6a03f6"
       when :arm
-        url "https://dist.ipfs.io/go-ipfs/v0.4.17/go-ipfs_v0.4.17_linux-arm.tar.gz"
-        version "0.4.17"
-        sha256 "893461d001a7e8709c9ec6983e0e3e8df7f710f8b8108db1185ed61f46a9a6de"
+        url "https://dist.ipfs.io/go-ipfs/v0.4.18/go-ipfs_v0.4.18_linux-arm.tar.gz"
+        version "0.4.18"
+        sha256 "31c5f1bf00a97fff393841c5467e34f1409c35ba406369875e916f7d7cc4408e"
       end
     end
   end
