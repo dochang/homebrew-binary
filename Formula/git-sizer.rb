@@ -6,12 +6,12 @@ class GitSizer < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/github/git-sizer/releases/download/v1.2.0/git-sizer-1.2.0-linux-amd64.zip"
-        version "1.2.0"
-        sha256 "0baf56a3296e86e884da06a9dad98ead48d4186060abeae33f944beca784fe37"
+        url "https://github.com/github/git-sizer/releases/download/v1.3.0/git-sizer-1.3.0-linux-amd64.zip"
+        version "1.3.0"
+        sha256 "d35cb3c365ead5f5ed078a65601bd150c5732f28bcb3c4872a9ee44c5b952b01"
       when :arm
         url "file://#{__FILE__}"
-        version "1.2.0"
+        version "1.3.0"
       end
     end
   end
