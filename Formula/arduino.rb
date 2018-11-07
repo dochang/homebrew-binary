@@ -6,13 +6,13 @@ class Arduino < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://downloads.arduino.cc/arduino-1.8.5-linux64.tar.xz"
-        version "1.8.5"
-        sha256 "bdf985da7289c02f8b7761a9a524921f6535fe4cec27a5fc57ce305afc1a1ab9"
+        url "https://downloads.arduino.cc/arduino-1.8.7-linux64.tar.xz"
+        version "1.8.7"
+        sha256 "eda4a5b989a317ab56b3700b1c5751308e62bfb8a29bf6829e4cdaaf15b62115"
       when :arm
-        url "https://downloads.arduino.cc/arduino-1.8.5-linuxarm.tar.xz"
-        version "1.8.5"
-        sha256 "d0dce15d80e879c90fc86efa81b98afdf2e4db31eaec2f56d57e02a02d47e16b"
+        url "https://downloads.arduino.cc/arduino-1.8.7-linuxarm.tar.xz"
+        version "1.8.7"
+        sha256 "723eb82c2b789e4dd53460c8dafc763516cda1aa2aa734e1bc532031519a555b"
       end
     end
   end
