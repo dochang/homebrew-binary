@@ -47,6 +47,10 @@ before_install:
   - gem update --user-install
   - gem install --user-install bundler
 
+before_script:
+  - '[ ! -d Formula ] || chmod -R go-w Formula'
+  # Fix "Incorrect file permissions (664)" error from `brew audit`.
+
 script:
   - bundle exec rubocop
   - brew test-bot
