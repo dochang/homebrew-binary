@@ -6,12 +6,12 @@ class Doctl < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/digitalocean/doctl/releases/download/v1.11.0/doctl-1.11.0-linux-amd64.tar.gz"
-        version "1.11.0"
-        sha256 "4d17fdb4c225f08db0087addc5c7dafca5561de3b6620a56b19bf95935e14128"
+        url "https://github.com/digitalocean/doctl/releases/download/v1.12.0/doctl-1.12.0-linux-amd64.tar.gz"
+        version "1.12.0"
+        sha256 "fdde25cc59eb306f4b6434e91d2092dc8e6e0a2d28adfb466e65b3b3bd7887d6"
       when :arm
         url "file://#{__FILE__}"
-        version "1.11.0"
+        version "1.12.0"
       end
     end
   end
