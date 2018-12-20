@@ -8,3 +8,5 @@ group :development, :test do
   gem "rubocop", require: false
   gem "travis", require: false
 end
+
+gem "solargraph", group: :development
