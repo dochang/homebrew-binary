@@ -25,6 +25,6 @@ class Cloudflared < Formula
   end
 
   test do
-    system bin/"cloudflared", "--version"
+    system "#{bin}/cloudflared", "--version"
   end
 end

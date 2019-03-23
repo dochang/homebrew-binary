@@ -31,6 +31,6 @@ class Gometalinter < Formula
   end
 
   test do
-    system bin/"gometalinter", "--version"
+    system "#{bin}/gometalinter", "--version"
   end
 end

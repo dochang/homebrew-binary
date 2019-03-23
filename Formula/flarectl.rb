@@ -25,6 +25,6 @@ class Flarectl < Formula
   end
 
   test do
-    system bin/"flarectl", "--version"
+    system "#{bin}/flarectl", "--version"
   end
 end

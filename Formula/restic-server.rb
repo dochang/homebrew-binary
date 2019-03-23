@@ -25,6 +25,6 @@ class ResticServer < Formula
   end
 
   test do
-    system bin/"restic-server", "--help"
+    system "#{bin}/restic-server", "--help"
   end
 end

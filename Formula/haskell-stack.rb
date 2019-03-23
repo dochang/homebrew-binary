@@ -21,6 +21,6 @@ class HaskellStack < Formula
   end
 
   test do
-    system bin/"stack", "--version"
+    system "#{bin}/stack", "--version"
   end
 end

@@ -12,6 +12,6 @@ class Pass < Formula
   end
 
   test do
-    system bin/"pass", "version"
+    system "#{bin}/pass", "version"
   end
 end

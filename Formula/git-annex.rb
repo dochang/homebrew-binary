@@ -37,13 +37,13 @@ class GitAnnex < Formula
   end
 
   def install
-    (prefix/"opt"/pkgname).install Dir["*"]
+    (prefix / "opt" / pkgname).install Dir["*"]
     install_bin
     # No need to install man pages, since git-annex is a shell wrapper that
     # overrides related variables.
   end
 
   test do
-    system bin/"git-annex", "version"
+    system "#{bin}/git-annex", "version"
   end
 end
