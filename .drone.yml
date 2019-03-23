@@ -1,0 +1,102 @@
+---
+kind: pipeline
+name: default
+
+steps:
+  - name: install locales
+    image: buildpack-deps:stable
+    volumes:
+      - name: locales
+        path: /usr/lib/locale
+    commands:
+      - apt-get update
+      - apt-get install --yes locales-all
+      # We have to install `locales-all` because brew sets `LC_ALL` to
+      # `en_US.UTF-8`.
+
+  # DO NOT use linuxbrew/brew because of [1]
+  #
+  # [1]: https://github.com/Homebrew/brew/pull/5752
+  - name: install Linuxbrew
+    image: buildpack-deps:stable
+    volumes:
+      - name: locales
+        path: /usr/lib/locale
+      - name: linuxbrew
+        path: /home/linuxbrew/.linuxbrew
+      - name: linuxbrew-cache
+        path: /root/.cache/Homebrew
+    commands:
+      - git clone https://github.com/Homebrew/brew /home/linuxbrew/.linuxbrew/Homebrew
+      - mkdir -p /home/linuxbrew/.linuxbrew/bin
+      - ln -s ../Homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin
+    environment:
+      HOMEBREW_DEVELOPER: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_ANALYTICS: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+
+  - name: create branch origin/master
+    image: buildpack-deps:stable
+    pull: always
+    commands:
+      - git branch origin/master HEAD
+      # Because of [1] & [2], we have to create `origin/master` manually.
+      #
+      # [1]: https://github.com/Homebrew/homebrew-test-bot/blob/e970dbb45db58db2243db9f8c30a3e8647c882a9/cmd/brew-test-bot.rb#L1198
+      # [2]: https://stackoverflow.com/a/44036486
+
+  - name: link tap
+    image: buildpack-deps:stable
+    volumes:
+      - name: locales
+        path: /usr/lib/locale
+      - name: linuxbrew
+        path: /home/linuxbrew/.linuxbrew
+      - name: linuxbrew-cache
+        path: /root/.cache/Homebrew
+    commands:
+      - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      - export HOMEBREW_TAP_NAME="$DRONE_REPO"
+      - export HOMEBREW_TAP_DIR="$(brew --repo $HOMEBREW_TAP_NAME)"
+      - rm -rf "$HOMEBREW_TAP_DIR"
+      - mkdir -p "$(dirname $HOMEBREW_TAP_DIR)"
+      - ln -s "$(pwd)" "$HOMEBREW_TAP_DIR"
+    environment:
+      HOMEBREW_DEVELOPER: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_ANALYTICS: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+
+  - name: test
+    image: buildpack-deps:stable
+    volumes:
+      - name: locales
+        path: /usr/lib/locale
+      - name: linuxbrew
+        path: /home/linuxbrew/.linuxbrew
+      - name: linuxbrew-cache
+        path: /root/.cache/Homebrew
+    commands:
+      - export GIT_PREVIOUS_COMMIT="$DRONE_COMMIT_BEFORE"
+      - export GIT_COMMIT="$DRONE_COMMIT_AFTER"
+      # https://github.com/Homebrew/homebrew-test-bot/blob/e970dbb45d/cmd/brew-test-bot.rb#L412-L415
+      # https://github.com/Homebrew/homebrew-test-bot/blob/e970dbb45d/cmd/brew-test-bot.rb#L365-L376
+      - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      - export HOMEBREW_TAP_NAME="$DRONE_REPO"
+      - make ci-deps
+      - make lint
+      - make test
+    environment:
+      HOMEBREW_DEVELOPER: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_ANALYTICS: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+
+volumes:
+  - name: locales
+    temp: {}
+  - name: linuxbrew
+    temp: {}
+  - name: linuxbrew-cache
+    temp: {}
