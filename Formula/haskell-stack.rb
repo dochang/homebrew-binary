@@ -7,7 +7,6 @@ class HaskellStack < Formula
       case Hardware::CPU.arch
       when :x86_64
         url "https://github.com/commercialhaskell/stack/releases/download/v1.9.3/stack-1.9.3-linux-x86_64-static.tar.gz"
-        version "1.9.3"
         sha256 "c9bf6d371b51de74f4bfd5b50965966ac57f75b0544aebb59ade22195d0b7543"
       when :arm
         url "https://github.com/commercialhaskell/stack/releases/download/v1.9.3/stack-1.9.3-linux-arm.tar.gz"
