@@ -11,11 +11,11 @@ class Gometalinter < Formula
     if OS.linux?
       case Hardware::CPU.arch
       when :x86_64
-        url "https://github.com/alecthomas/gometalinter/releases/download/v2.0.11/gometalinter-2.0.11-linux-amd64.tar.gz"
-        sha256 "97d8bd0a4d024740964c7fc2ae41276cf5f839ccf0749528ca900942f656d201"
+        url "https://github.com/alecthomas/gometalinter/releases/download/v3.0.0/gometalinter-3.0.0-linux-amd64.tar.gz"
+        sha256 "2cab9691fa1f94184ea1df2b69c00990cdf03037c104e6a9deab6815cdbe6a77"
       when :arm
         url "file://#{__FILE__}"
-        version "2.0.11"
+        version "3.0.0"
       end
     end
   end
