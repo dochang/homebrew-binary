@@ -1,0 +1,33 @@
+AllCops:
+  # Homebrew requires Ruby 2.3.3
+  #
+  # https://github.com/Homebrew/brew/blob/1.5.10/Library/Homebrew/utils/ruby.sh#L6
+  TargetRubyVersion: 2.3.3
+Layout/SpaceAroundOperators:
+  # Homebrew uses many Pathname objects in Formulas.  Disable this for code
+  # readability.
+  Enabled: false
+Metrics/LineLength:
+  # Too many long url strings in Formulas.
+  Enabled: false
+Naming/FileName:
+  # Homebrew Formula files have kebab-case names.
+  Enabled: false
+Naming/HeredocDelimiterNaming:
+  # Many Formulas use `EOS`.
+  Blacklist:
+    - END
+    - '(?-mix:EO[A-RT-Z]{1})'
+Style/Documentation:
+  # Almost every Formula doesn't have top-level class documentation comment.
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  # Almost every Formula file doesn't have the frozen string literal comment.
+  # But some files, such as `Gemfile`, contains this comment by default.  So do
+  # not set `EnforcedStyle` to `never`.  Just disable it.
+  Enabled: false
+Style/HashSyntax:
+  EnforcedStyle: no_mixed_keys
+Style/StringLiterals:
+  # Homebrew uses double quotes string literals in Formulas
+  EnforcedStyle: double_quotes
