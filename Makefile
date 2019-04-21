@@ -2,7 +2,7 @@ all:
 
 ci-deps:
 	brew bundle install --no-upgrade
-	bundle install
+	bundle install --with test
 
 lint:
 	bundle exec rufo --check .
